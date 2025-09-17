@@ -494,6 +494,9 @@ section .titleContent::after {
   .max-width {
     padding: 0 23px;
   }
+  .home .max-width {
+  margin-top: 33%;
+}
   .home .homeContent .text2 {
     font-size: 60px;
   }
@@ -503,12 +506,16 @@ section .titleContent::after {
   .home .homeContent a {
     font-size: 20px;
   }
+
 }
 
 @media (max-width: 500px) {
   .max-width {
     padding: 0 23px;
   }
+    .home .max-width {
+  margin-top: 47%;
+}
   .home .homeContent .text2 {
     font-size: 50px;
   }
