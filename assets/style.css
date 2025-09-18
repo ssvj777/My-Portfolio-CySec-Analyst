@@ -252,7 +252,7 @@ section .titleContent {
   position: relative;
   text-align: center;
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 30px;
   padding-bottom: 22px;
   font-family: "Ubuntu", sans-serif;
@@ -268,6 +268,7 @@ section .titleContent::before {
   background: #111;
   transform: translateX(-50%);
 }
+
 section .titleContent::after {
   position: absolute;
   bottom: -12px;
@@ -275,7 +276,6 @@ section .titleContent::after {
   padding: 5px;
   font-size: 20px;
   color: rgb(7, 67, 196);
-  background: var(--text);
   transform: translateX(-50%);
 }
 
@@ -342,8 +342,8 @@ section .titleContent::after {
 }
 .about .titleContent::after {
   content: "who am i";
+  background: var(--text);
 }
-
 .about .aboutContent .aboutImage {
   width: 30%;
   margin-left: 5%;
@@ -386,6 +386,51 @@ section .titleContent::after {
   transition: all 0.3s ease;
 }
 
+
+/* Skill Session Styling... */
+.skills{
+  background: #f4f4f4;
+  padding-bottom: 44px;
+}
+.skills .titleContent::after {
+  content: "what i have";
+  background: #f4f4f4;
+}
+
+.skillsContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 22px;
+  justify-content: space-around;
+}
+
+.skillCard {
+  background: #F8F8FF;
+  border-radius: 15px;
+  padding: 25px 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 180px;
+}
+
+.skillCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.skillIcons {
+  width: 143px;
+  height: 77px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.skillCard h4 {
+  font-size: 18px;
+  color: #333;
+  font-weight: 700;
+}
 
 
 /* Mobile Screen Responsive Styling */
