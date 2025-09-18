@@ -405,7 +405,7 @@ section .titleContent::after {
 }
 
 .skillCard {
-  background: #F8F8FF;
+  background: white;
   border-radius: 17px;
   padding: 25px 15px;
   text-align: center;
