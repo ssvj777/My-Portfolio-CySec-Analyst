@@ -246,7 +246,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 section .titleContent {
   position: relative;
@@ -432,6 +432,96 @@ section .titleContent::after {
   font-weight: 700;
 }
 
+/* Projects Section Styling*/
+.projects{
+  background: var(--text);
+  padding-bottom: 55px;
+}
+.projects .titleContent::after {
+  content: "check my work";
+  background: var(--text);
+}
+
+.projectsContents {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.projectDetails {
+  position: relative;
+  width: 333px;
+  height: 222px;
+  overflow: hidden;
+  border-radius: 17px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin: 10px;
+}
+
+.projectDetails img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.projectInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  transition: opacity 0.5s ease;
+}
+
+.projectDetails:hover img {
+  transform: scale(1.1);
+  filter: blur(2px);
+}
+
+.projectDetails:hover .projectInfo {
+  opacity: 1;
+}
+
+.projectInfo h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.projectInfo p {
+  font-size: 17px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #f4f4f4 ;
+}
+
+.projectInfo a {
+  padding: 6px 14px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.projectInfo a:hover {
+  background: #000;
+  color: #fff;
+}
 
 /* Mobile Screen Responsive Styling */
 @media (max-width: 1300px) {
@@ -457,6 +547,9 @@ section .titleContent::after {
 @media (max-width: 1300px) {
   .home .max-width {
     margin-left: 0px;
+  }
+  .projectsContents {
+    justify-content: space-around;
   }
 }
 
