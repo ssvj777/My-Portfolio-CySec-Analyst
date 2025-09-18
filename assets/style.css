@@ -400,13 +400,13 @@ section .titleContent::after {
 .skillsContent {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 22px;
+  gap: 28px;
   justify-content: space-around;
 }
 
 .skillCard {
   background: #F8F8FF;
-  border-radius: 15px;
+  border-radius: 17px;
   padding: 25px 15px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
@@ -420,7 +420,7 @@ section .titleContent::after {
 }
 
 .skillIcons {
-  width: 143px;
+  width: 137px;
   height: 77px;
   object-fit: contain;
   margin-bottom: 10px;
@@ -441,7 +441,6 @@ section .titleContent::after {
 }
 
 @media screen and (max-width: 876px) {
-
 
   .home .homeContent .text2 {
     font-size: 50px;
@@ -539,6 +538,9 @@ section .titleContent::after {
   .max-width {
     padding: 0 23px;
   }
+    .home .max-width {
+  margin-top: 33vh;
+}
   .home .homeContent .text2 {
     font-size: 70px;
   }
@@ -552,12 +554,12 @@ section .titleContent::after {
 }
 
 @media (max-width: 500px) {
-  .home .max-width {
-  margin-top: 33vh;
-}
   .max-width {
     padding: 0 23px;
   }
+  .home .max-width {
+  margin-top: 33vh;
+}
   .home .homeContent .text2 {
     font-size: 55px;
   }
