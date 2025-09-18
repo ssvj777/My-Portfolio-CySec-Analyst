@@ -553,7 +553,7 @@ section .titleContent::after {
 
 @media (max-width: 500px) {
   .home .max-width {
-  margin-top: 44vh;
+  margin-top: 28vh;
 }
   .max-width {
     padding: 0 23px;
