@@ -187,7 +187,7 @@ body {
   display: none;
   top: 0;
   left: -70%;
-  transition: 1s;
+  transition: 0.7s;
   padding-top: 134px;
   font-family: "Ubuntu", sans-serif;
   z-index: 22;
