@@ -135,7 +135,6 @@ body {
 }
 
 .navbar .logo a {
-  font-weight: 700;
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -228,11 +227,7 @@ body {
   width: 0;
   height: 2px;
   background: var(--gradient);
-  transition: width 0.4s ease;
-}
-
-.mobile-view-navbar-menu-list a::after {
-  transition: width 0.7s ease;
+  transition: width 0.3s ease;
 }
 
 .nav-menu a:hover::after,
