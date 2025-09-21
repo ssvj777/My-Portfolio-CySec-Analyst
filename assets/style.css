@@ -48,7 +48,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 100;
   transition: opacity 0.5s ease;
 }
 
@@ -114,7 +114,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 28;
   padding: 10px 0;
   font-family: "Ubuntu", sans-serif;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -134,19 +134,16 @@ body {
   align-items: center;
 }
 
-.navbar .logo a, .sideNavbar .logo a {
-       
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-              font-family: "Pacifico";
-                font-size: 30px;
-        
+.navbar .logo a {
+  font-size: 28px;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: "Pacifico";
+  font-size: 30px;
 }
-
 
 .nav-menu {
   display: flex;
@@ -156,104 +153,7 @@ body {
   padding: 22px;
 }
 
-.mobile-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--text-primary);
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100vh;
-  
-  backdrop-filter: blur(20px);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1001;
-}
-
-.mobile-menu.active {
-  right: 0;
-}
-
-.mobile-menu .nav-link {
-  font-size: 1.5rem;
-}
-
-.mobile-close {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  background: none;
-  border: none;
-  color: var(--text-primary);
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-/* :root {
-  --bg: #0b0c10;
-  --panel: #111318;
-  --muted: #8a93a6;
-  --text: #e6e9ef;
-  --brand: #5b8cff;
-  --brand-2: #7bd389;
-  --danger: #ff6b6b;
-  --ring: 0 0 0 3px rgb(91 140 255 / 0.35);
-  --radius: 16px;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  --shadow-soft: 0 6px 16px rgba(0, 0, 0, 0.25);
-  --maxw: 1200px;
-} */
-
-
-
-
-
-
-
-/* Navbar Icons Styling */
-
-.nav-menu a, .sideNavbarList a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 19px;
-  transition: color 0.3s ease;
-  position: relative;
-}
-
-.nav-menu a:hover, .sideNavbarList a:hover 
- {
-  color: var(--text-primary);
-}
-
-.nav-menu a::after, .sideNavbarList a::after  {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--gradient);
-  transition: width 0.3s ease;
-}
-
-.nav-menu a:hover::after,
-.sideNavbarList a:hover::after {
-  width: 100%;
-}
-
+/* Navigation Bar's Icon Styling... */
 .navbar .showNavbar,
 .navbar .closeNavbar {
   color: var(--text-primary);
@@ -277,8 +177,8 @@ body {
   transform: translateY(-1px);
 }
 
-/* Side Navbar Styling */
-.sideNavbar {
+/* Mobile View Navigation Bar Styling */
+.mobile-view-navbar {
   background: var(--bg-primary);
   backdrop-filter: blur(20px);
   border: 1px solid var(--border);
@@ -292,77 +192,149 @@ body {
   transition: 1s;
   padding-top: 134px;
   font-family: "Ubuntu", sans-serif;
-  z-index: 999;
+  z-index: 22;
 }
 
-.sideNavbar .sideNavbarList {
+.mobile-view-navbar .mobile-view-navbar-menu-list {
   display: grid;
   justify-content: center;
   gap: 28px;
 }
-.sideNavbarList a {
+.mobile-view-navbar-menu-list a {
   width: fit-content;
 }
-/* Navbar Content Styling */
-/* .navbarList a,
-.sideNavbarList a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-  font-size: 19px;
-  cursor: pointer;
-  border-radius: 13px;
-  transition: 0.2s ease;
-} */
 
+/* Navigation Contents Styling... */
+.nav-menu a,
+.mobile-view-navbar-menu-list a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-menu a:hover,
+.mobile-view-navbar-menu-list a:hover {
+  color: var(--text-primary);
+}
+
+.nav-menu a::after,
+.mobile-view-navbar-menu-list a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient);
+  transition: width 0.4s ease;
+}
+
+.mobile-view-navbar-menu-list a::after {
+  transition: width 0.7s ease;
+}
+
+.nav-menu a:hover::after,
+.mobile-view-navbar-menu-list a:hover::after {
+  width: 100%;
+}
 
 /* Home Styling */
 .home {
   display: flex;
-  
   height: 100vh;
-  background-size: cover;
-  background-attachment: fixed;
-  color: white;
-  min-height: 500px;
-  font-family: "Ubuntu", sans-serif;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(37, 99, 235, 0.1) 0%,
+    transparent 50%
+  );
 }
 
-.home .max-width {
-  margin: auto 0 auto 40px;
+.home-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 2rem;
+  animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.home .homeContent .text1 {
-  font-size: 28px;
+.home .home-content .text1 {
+  margin-top: 1rem;
+  font-size: 22px;
+  color: var(--text-secondary);
+  font-family: "JetBrains Mono", monospace;
 }
-.home .homeContent .text2 {
+.home .home-content .text2 {
   font-size: 77px;
-  font-weight: 600;
-  margin-left: -3px;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.home .homeContent .text3 {
+.home .home-content .text3 {
   font-size: 40px;
-  margin: 5px 0;
+  margin-bottom: 1rem;
 }
-.home .homeContent .text3 span {
+.home .home-content .text3 span {
   font-weight: 500;
-  color: rgb(7, 67, 196);
-}
-.home .homeContent a {
-  display: inline-block;
-  background: #0056b3;
-  border-color: transparent;
-  color: var(--text);
-  font-size: 28px;
-  font-weight: 444;
-  padding: 8px 22px;
-  margin-top: 22px;
-  border-radius: 7px;
-  transition: all 0.3s ease;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-weight: 700;
 }
 
-.home .homeContent a:hover {
-  background: #007bff;
+.home-description {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem ;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  display: inline-flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--gradient);
+  color: white;
+}
+
+.btn-primary:hover {
   transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 /* Common Styling for Upcoming Sessions */
@@ -810,40 +782,13 @@ footer a {
 
 /* Mobile Screen Responsive Styling */
 @media (max-width: 1300px) {
-  .home .max-width {
-    margin-left: 0px;
-  }
-}
-
-@media screen and (max-width: 876px) {
-  .home .homeContent .text2 {
-    font-size: 50px;
-  }
-  .home .homeContent .text3 {
-    font-size: 27px;
-  }
-  .home .homeContent a {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 1300px) {
-  .home .max-width {
-    margin-left: 0px;
-  }
   .projectsContents,
   .certificationsContent {
     justify-content: space-around;
   }
 }
 
-@media (max-width: 991px) {
-  .max-width {
-    padding: 0 50px;
-  }
-}
-
-@media (max-width: 947px) {
+@media (max-width: 900px) {
   .nav-container {
     padding-left: 47px;
     padding-right: 13px;
@@ -861,7 +806,7 @@ footer a {
     padding: 22px;
   }
 
-  .sideNavbar {
+  .mobile-view-navbar {
     display: block;
   }
 
@@ -870,25 +815,18 @@ footer a {
     display: block;
   }
 
-  .sideNavbarList a {
+  .mobile-view-navbar-menu-list a {
     font-size: 20px;
     padding: 3px;
   }
 
-  .scrollBtn {
-    right: 17px;
-    bottom: 3px;
-  }
 
-  .home .homeContent .text2 {
-    font-size: 72px;
+  /* Home Mobile View */
+  .home .home-content .text2 {
+    font-size: 69px;
   }
-  .home .homeContent .text3 {
-    font-size: 35px;
-  }
-  .home .homeContent a {
-    font-size: 22px;
-    padding: 6px 24px;
+  .home .home-content .text3 {
+    font-size: 33px;
   }
   .about .aboutContent .aboutImage {
     width: 100%;
@@ -943,38 +881,30 @@ footer a {
   }
 }
 
-@media (max-width: 690px) {
-  .max-width {
-    padding: 0 23px;
+@media (max-width: 700px) {
+  
+  /* Home Mobile View */
+  .home .home-content .text2 {
+    font-size: 55px;
   }
-  .home .max-width {
-    margin-top: 33vh;
-  }
-  .home .homeContent .text2 {
-    font-size: 70px;
-  }
-  .home .homeContent .text3 {
-    font-size: 47px;
-  }
-  .home .homeContent a {
-    font-size: 28px;
+  .home .home-content .text3 {
+    font-size: 33px;
   }
 }
 
 @media (max-width: 500px) {
-  .max-width {
-    padding: 0 23px;
+
+  /* Home Mobile View */
+  .home .home-content .text1 {
+    margin-top: 3rem;
   }
-  .home .max-width {
-    margin-top: 33vh;
+  .home .home-content .text2 {
+    font-size: 47px;
   }
-  .home .homeContent .text2 {
-    font-size: 55px;
+  .home .home-content .text3 {
+    font-size: 28px;
   }
-  .home .homeContent .text3 {
-    font-size: 33px;
-  }
-  .home .homeContent a {
-    font-size: 22px;
+  .home-description {
+    font-size: 1.1rem;
   }
 }

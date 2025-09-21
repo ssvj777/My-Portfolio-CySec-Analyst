@@ -1,37 +1,36 @@
+//Loading Screen Script
 
-//Loading Screen Script 
-
-window.addEventListener('load',()=>{
+window.addEventListener("load", () => {
   const loading = document.getElementById("loading");
-  setTimeout(()=>{
-    loading.classList.add('hidden');
-  },700)
-})
+  setTimeout(() => {
+    loading.classList.add("hidden");
+  }, 700);
+});
 
-        // Scroll to Top Button
+// Scroll to Top Button
 
-        const scrollTop = document.getElementById('scrollTop');
+const scrollTop = document.getElementById("scrollTop");
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTop.classList.add('visible');
-            } else {
-                scrollTop.classList.remove('visible');
-            }
-        });
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollTop.classList.add("visible");
+  } else {
+    scrollTop.classList.remove("visible");
+  }
+});
 
-        scrollTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
+scrollTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
 
 //Navbar Script
+
 const navbarScroll = document.querySelector(".navbar");
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", ()=> {
   if (window.scrollY > 28) {
     navbarScroll.classList.add("scrolled");
   } else {
@@ -39,31 +38,33 @@ window.addEventListener("scroll", function () {
   }
 });
 
-let sideNavbar = document.querySelector(".sideNavbar");
+let mobileViewNavbar = document.querySelector(".mobile-view-navbar");
 let showToggle = document.querySelector(".showNavbar");
 let showCloseBtn = document.querySelector(".closeNavbar");
 
-document.querySelector(".togglebtn").addEventListener("click", function () {
-  sideNavbar.style.left = "0";
+document.querySelector(".togglebtn").addEventListener("click", () => {
+  mobileViewNavbar.style.left = "0";
   showToggle.style.display = "none";
   showCloseBtn.style.display = "flex";
   navbarScroll.classList.add("scrolled");
 });
 
-document.querySelector(".xMark").addEventListener("click", function () {
-  sideNavbar.style.left = "-70%";
+document.querySelector(".xMark").addEventListener("click", () => {
+  mobileViewNavbar.style.left = "-70%";
   showToggle.style.display = "flex";
   showCloseBtn.style.display = "none";
 });
 
 // Close the menu when a link is clicked
 
-document.addEventListener("DOMContentLoaded", function () {
-  const listcontents = document.querySelectorAll(".sideNavbar a");
+document.addEventListener("DOMContentLoaded", () => {
+  const listcontents = document.querySelectorAll(
+    ".mobile-view-navbar-menu-list a"
+  );
 
   listcontents.forEach(function (listcontent) {
-    listcontent.addEventListener("click", function () {
-      sideNavbar.style.left = "-70%";
+    listcontent.addEventListener("click", () => {
+      mobileViewNavbar.style.left = "-70%";
       showToggle.style.display = "flex";
       showCloseBtn.style.display = "none";
     });
@@ -74,12 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
 const animationScript = ["Front-End Developer", "React Developer"];
 
 // Typing animation script start
-new Typed(".typing", {
+new Typed(".role", {
   strings: animationScript,
   typeSpeed: 100,
   backSpeed: 60,
   loop: true,
-  showCursor: false,
+  showCursor: true,
+  cursorChar: "|",
 });
 
 new Typed(".typing2", {
