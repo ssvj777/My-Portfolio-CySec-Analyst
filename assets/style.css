@@ -262,12 +262,12 @@ body {
 }
 .home .home-content .text1 {
   margin-top: 1rem;
-  font-size: 4vh;
+  font-size: 22px;
   color: var(--text-secondary);
   font-family: "JetBrains Mono", monospace;
 }
 .home .home-content .text2 {
-  font-size: 13vh;
+  font-size: 77px;
   font-weight: 700;
   background: var(--gradient);
   -webkit-background-clip: text;
@@ -275,17 +275,18 @@ body {
   background-clip: text;
 }
 .home .home-content .text3 {
-  font-size: 7vh;
+  font-size: 40px;
   margin-bottom: 1rem;
 }
 .home .home-content .text3 span {
+  font-weight: 500;
   color: var(--text-primary);
   margin-bottom: 2rem;
   font-weight: 700;
 }
 
 .home-description {
-  font-size: 3vh;
+  font-size: 1.2rem;
   color: var(--text-muted);
   max-width: 600px;
   margin-left: auto;
@@ -819,6 +820,21 @@ footer a {
   }
 
 
+  /* Home Mobile View */
+  .home .home-content .text2 {
+    font-size: 69px;
+  }
+  .home .home-content .text3 {
+    font-size: 33px;
+  }
+  .about .aboutContent .aboutImage {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    gap: 13px;
+  }
+
   .about .aboutContent .aboutImage .wrapper {
     margin: 0 auto 10px;
   }
@@ -867,16 +883,24 @@ footer a {
 @media (max-width: 700px) {
   
   /* Home Mobile View */
-  .home .home-content .text1 {
-    font-size: 4vh;
-  }
   .home .home-content .text2 {
-    font-size: 8vh;
+    font-size: 55px;
   }
   .home .home-content .text3 {
-    font-size: 5.5vh;
+    font-size: 33px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  /* Home Mobile View */
+  .home .home-content .text2 {
+    font-size: 47px;
+  }
+  .home .home-content .text3 {
+    font-size: 28px;
   }
   .home-description {
-    font-size: 2.9vh;
+    font-size: 1.1rem;
   }
 }
