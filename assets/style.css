@@ -1,10 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-
-/* CSS * Selector, Select all elements */
-body{
-  font-style: italic;
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #10b981;
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border: rgba(148, 163, 184, 0.1);
+  --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --radius: 12px;
+  --radius-lg: 16px;
+  --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -14,9 +26,182 @@ body{
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-:root {
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Loading Animation */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.loading.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--border);
+  border-top: 3px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--gradient);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 10px 0;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar.scrolled {
+  background: var(--bg-primary);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.nav-container {
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo a, .sideNavbar .logo a {
+       
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+              font-family: "Pacifico";
+                font-size: 30px;
+        
+}
+
+
+.nav-menu {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  
+  backdrop-filter: blur(20px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1001;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu .nav-link {
+  font-size: 1.5rem;
+}
+
+.mobile-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* :root {
   --bg: #0b0c10;
   --panel: #111318;
   --muted: #8a93a6;
@@ -29,101 +214,54 @@ html {
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   --shadow-soft: 0 6px 16px rgba(0, 0, 0, 0.25);
   --maxw: 1200px;
-}
+} */
 
-/* Scroll button styling */
-.scrollBtn {
-  position: fixed;
-  height: 50px;
-  width: 47px;
-  color: var(--text);
-  background-color: var(--panel);
-  border: 1px solid rgba(222, 222, 222, 0.1);
-  box-shadow: 0 0 15px rgba(222, 222, 222, 0.1);
-  right: 28px;
-  bottom: 28px;
-  text-align: center;
-  line-height: 50px;
-  color: #fff;
-  z-index: 999;
-  font-size: 28px;
-  border-radius: 7px;
-  cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-.scrollBtn.show {
-  opacity: 1;
-  pointer-events: auto;
-  bottom: 30px;
-}
 
-/* Navbar Styling */
-.navbar {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 28;
-  width: 100%;
-  padding: 10px 0;
-  font-family: "Ubuntu", sans-serif;
-  transition: all 0.3s ease;
-}
 
-.navbar.sticky {
-  background-color: var(--panel);
-  border-bottom: 1px solid rgba(140, 150, 170, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}
 
-.max-width {
-  max-width: 1300px;
-  padding: 0 80px;
-  margin: auto;
-}
-.navbar .max-width {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
-.navbar .logo a {
-  font-size: 30px;
-  font-weight: 500;
-  color: #fff;
-  font-family: "Pacifico";
-  transition: all 0.3s ease;
-}
 
-.navbar .logo a span {
-  color: rgb(7, 67, 196);
-}
-.navbar.sticky .logo a span {
-  color: white;
-}
-.navbar.sticky .logo a:hover,
-.navbar.sticky .logo a span:hover {
-  color: rgb(7, 67, 196);
-}
-
-.navbar .navbarList {
-  display: flex;
-  gap: 28px;
-  align-items: center;
-  justify-content: space-around;
-  padding: 22px;
-}
 
 /* Navbar Icons Styling */
+
+.nav-menu a, .sideNavbarList a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 19px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-menu a:hover, .sideNavbarList a:hover 
+ {
+  color: var(--text-primary);
+}
+
+.nav-menu a::after, .sideNavbarList a::after  {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient);
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.sideNavbarList a:hover::after {
+  width: 100%;
+}
+
 .navbar .showNavbar,
 .navbar .closeNavbar {
-  color: var(--text);
+  color: var(--text-primary);
   font-size: 28px;
   display: none;
   align-items: center;
   transition: 0.2s ease;
+  background: none;
 }
 
 .navbar .showNavbar .togglebtn,
@@ -141,21 +279,20 @@ html {
 
 /* Side Navbar Styling */
 .sideNavbar {
-  background-color: var(--panel);
-  border-right: 1px solid rgba(140, 150, 170, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  width: 60%;
+  background: var(--bg-primary);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  width: 57%;
   height: 100%;
   position: fixed;
   display: none;
-  top: 0px;
-  z-index: 22;
+  top: 0;
   left: -70%;
   transition: 1s;
-  padding-top: 143px;
+  padding-top: 134px;
   font-family: "Ubuntu", sans-serif;
-  transition: all 0.3s ease;
+  z-index: 999;
 }
 
 .sideNavbar .sideNavbarList {
@@ -163,9 +300,11 @@ html {
   justify-content: center;
   gap: 28px;
 }
-
+.sideNavbarList a {
+  width: fit-content;
+}
 /* Navbar Content Styling */
-.navbarList a,
+/* .navbarList a,
 .sideNavbarList a {
   text-decoration: none;
   color: var(--text);
@@ -174,18 +313,13 @@ html {
   cursor: pointer;
   border-radius: 13px;
   transition: 0.2s ease;
-}
+} */
 
-.navbarList a:hover,
-.sideNavbarList a:hover {
-  color: rgb(7, 67, 196);
-  transform: translateY(-1px);
-}
 
 /* Home Styling */
 .home {
   display: flex;
-  background: url(img/bg.jpg) no-repeat center;
+  
   height: 100vh;
   background-size: cover;
   background-attachment: fixed;
@@ -235,9 +369,11 @@ html {
 .about,
 .skills,
 .projects,
+.Certifications,
 .contact,
 footer {
   font-family: "Poppins", sans-serif;
+  width: 100vw;
 }
 .about .aboutContent,
 .skills .skillsContent,
@@ -279,7 +415,7 @@ section .titleContent::after {
 }
 
 /* Common Icons Styling... */
-.wrapperIcons{
+.wrapperIcons {
   display: flex;
   justify-content: center;
   width: 260px;
@@ -321,9 +457,10 @@ section .titleContent::after {
 }
 .iconContent span {
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 10px;
   margin-left: 5px;
+  color: rgb(7, 67, 196);
 }
 
 .iconContent:hover .icon {
@@ -335,7 +472,7 @@ section .titleContent::after {
 }
 
 /* About Styling... */
-.about{
+.about {
   background: var(--text);
   padding-bottom: 44px;
 }
@@ -385,9 +522,8 @@ section .titleContent::after {
   transition: all 0.3s ease;
 }
 
-
 /* Skill Session Styling... */
-.skills{
+.skills {
   background: #f4f4f4;
   padding-bottom: 44px;
 }
@@ -432,41 +568,52 @@ section .titleContent::after {
 }
 
 /* Projects Section Styling*/
-.projects{
-  background: var(--text);
+.projects {
+  background: var(--bg);
   padding-bottom: 55px;
+  color: var(--text);
+}
+.projects .titleContent::before {
+  background: var(--text);
 }
 .projects .titleContent::after {
-  content: "check my work";
-  background: var(--text);
+  content: "Check My Work";
+  background: var(--bg);
 }
 
-.projectsContents {
+.projectsContents,
+.certificationsContent {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
   margin-top: 40px;
 }
 
-.projectDetails {
+.projectDetails,
+.certificationDetails {
   position: relative;
-  width: 333px;
+  width: 340px;
   height: 222px;
   overflow: hidden;
   border-radius: 17px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  margin: 10px;
+  margin: 7px;
+  background: rgba(255, 255, 255, 0.05);
 }
 
-.projectDetails img {
+.projectDetails img,
+.certificationDetails img {
   width: 100%;
   height: 100%;
+  padding: 13px;
   object-fit: cover;
+  border-radius: 22px;
   transition: all 0.5s ease;
 }
 
-.projectInfo {
+.projectInfo,
+.certificationInfo {
   position: absolute;
   top: 0;
   left: 0;
@@ -485,29 +632,34 @@ section .titleContent::after {
   transition: opacity 0.5s ease;
 }
 
-.projectDetails:hover img {
+.projectDetails:hover img,
+.certificationDetails:hover img {
   transform: scale(1.1);
   filter: blur(2px);
 }
 
-.projectDetails:hover .projectInfo {
+.projectDetails:hover .projectInfo,
+.certificationDetails:hover .certificationInfo {
   opacity: 1;
 }
 
-.projectInfo h3 {
+.projectInfo h3,
+.certificationInfo h3 {
   font-size: 22px;
   margin-bottom: 10px;
   font-weight: 700;
 }
 
-.projectInfo p {
+.projectInfo p,
+.certificationInfo p {
   font-size: 17px;
   margin-bottom: 10px;
   font-weight: 600;
-  color: #f4f4f4 ;
+  color: #f4f4f4;
 }
 
-.projectInfo a {
+.projectInfo a,
+.certificationInfo a {
   padding: 6px 14px;
   background: #fff;
   color: #000;
@@ -517,9 +669,143 @@ section .titleContent::after {
   transition: 0.3s;
 }
 
-.projectInfo a:hover {
+.projectInfo a:hover,
+.certificationInfo a:hover {
   background: #000;
   color: #fff;
+}
+
+/* Certifications Section Styling*/
+.Certifications {
+  background: #0d1117;
+  padding-bottom: 55px;
+  color: var(--text);
+}
+.Certifications .titleContent::before {
+  background: var(--text);
+  width: 208px;
+}
+.Certifications .titleContent::after {
+  content: "What I Have Done";
+  background: #0d1117;
+}
+
+/* Contact Session Styling... */
+.contact {
+  background: var(--bg);
+  padding-bottom: 55px;
+  color: var(--text);
+}
+.contact .contactContent {
+  justify-content: space-between;
+}
+.contact .titleContent::before {
+  background: var(--text);
+  width: 208px;
+}
+.contact .titleContent::after {
+  content: "Get In Touch";
+  background: var(--bg);
+}
+
+.contact .contactContent .contactDetails {
+  width: 40%;
+  margin-left: 3%;
+}
+
+.contact .contactContent .contactDetails .text {
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: rgb(7, 67, 196);
+}
+
+.contactDetails .icons {
+  margin: 12px 0;
+}
+.contactDetails .icons .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+.contactDetails .icons .row i {
+  font-size: 25px;
+  color: rgb(7, 67, 196);
+}
+
+.contactDetails .icons .row .info {
+  margin-left: 30px;
+  justify-content: left;
+  float: left;
+}
+
+.contactDetails .icons .row .info .email {
+  position: relative;
+  left: -7px;
+}
+.contactDetails .icons .row .info .head {
+  font-weight: 700;
+}
+.contactDetails .icons .row .info .sub-title {
+  color: green;
+  font-weight: 700;
+  position: relative;
+  left: -2px;
+}
+.contactDetails .icons .row .info .sub-title a {
+  color: green;
+}
+
+.contact .contactContent .contactDetails .text1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 13px;
+  color: rgb(7, 67, 196);
+}
+.contactDetails .wrapperIcons {
+  position: relative;
+  left: -37px;
+}
+.contact .education .degree {
+  display: grid;
+  justify-content: center;
+  gap: 28px;
+}
+.contact .education {
+  height: 333px;
+  margin-right: 3%;
+}
+.contact .education h1 {
+  margin-top: 20px;
+  font-size: 47px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: rgb(7, 67, 196);
+}
+
+.contact .education .degree {
+  margin-top: 13px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.contact .education .degree span {
+  color: green;
+  font-weight: 700;
+}
+
+/* footer section styling */
+footer {
+  background: var(--text);
+  padding: 17px;
+  color: var(--bg);
+  text-align: center;
+  font-size: 22px;
+}
+footer a {
+  color: rgb(7, 67, 196);
+  text-decoration: none;
 }
 
 /* Mobile Screen Responsive Styling */
@@ -530,7 +816,6 @@ section .titleContent::after {
 }
 
 @media screen and (max-width: 876px) {
-
   .home .homeContent .text2 {
     font-size: 50px;
   }
@@ -542,12 +827,12 @@ section .titleContent::after {
   }
 }
 
-
 @media (max-width: 1300px) {
   .home .max-width {
     margin-left: 0px;
   }
-  .projectsContents {
+  .projectsContents,
+  .certificationsContent {
     justify-content: space-around;
   }
 }
@@ -559,11 +844,11 @@ section .titleContent::after {
 }
 
 @media (max-width: 947px) {
-    .max-width {
-    padding-left: 17px;
+  .nav-container {
+    padding-left: 47px;
     padding-right: 13px;
   }
-  .navbar .navbarList {
+  .nav-menu {
     display: none;
   }
 
@@ -579,7 +864,7 @@ section .titleContent::after {
   .sideNavbar {
     display: block;
   }
-  
+
   .navbar .showNavbar .togglebtn,
   .navbar .closeNavbar .xMark {
     display: block;
@@ -624,15 +909,47 @@ section .titleContent::after {
   .about .aboutContent .aboutDetails .text {
     display: grid;
   }
+  .contact .max-width {
+    margin: 0px;
+  }
+  .contact .contactContent {
+    display: grid;
+    gap: 28px;
+  }
+  .contact .education {
+    margin-right: 0px;
+  }
+  .contact .contactContent .contactDetails,
+  .contact .contactContent .education {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  .contact .contactContent .contactDetails .iconSession {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactDetails .wrapperIcons {
+    left: 0;
+  }
+  .contact .contactContent .education .degree {
+    padding: 10px;
+  }
+  .contact .education h1 {
+    text-align: center;
+  }
 }
 
 @media (max-width: 690px) {
   .max-width {
     padding: 0 23px;
   }
-    .home .max-width {
-  margin-top: 33vh;
-}
+  .home .max-width {
+    margin-top: 33vh;
+  }
   .home .homeContent .text2 {
     font-size: 70px;
   }
@@ -642,7 +959,6 @@ section .titleContent::after {
   .home .homeContent a {
     font-size: 28px;
   }
-
 }
 
 @media (max-width: 500px) {
@@ -650,15 +966,15 @@ section .titleContent::after {
     padding: 0 23px;
   }
   .home .max-width {
-  margin-top: 33vh;
-}
+    margin-top: 33vh;
+  }
   .home .homeContent .text2 {
     font-size: 55px;
   }
   .home .homeContent .text3 {
     font-size: 33px;
   }
-    .home .homeContent a {
+  .home .homeContent a {
     font-size: 22px;
   }
 }

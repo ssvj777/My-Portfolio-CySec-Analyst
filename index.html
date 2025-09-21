@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="VIJAY SS - Professional Front-End Developer specializing in React.js, JavaScript, and modern web technologies. View my projects and get in touch.">
+    <meta name="keywords" content="Front-End Developer, React.js, JavaScript, Web Developer, Portfolio">
+    <meta name="author" content="Vijay SS">
     <title>Vijay Portfolio</title>
     <link
       rel="shortcut icon"
@@ -27,14 +30,19 @@
     />
   </head>
   <body>
-    <!-- Scroll Button start -->
-    <div class="scrollBtn">
-      <i class="fas fa-angle-double-up"></i>
+        <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
     </div>
 
-    <!-- Navbar -->
+        <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-angle-double-up"></i>
+    </button>
+
+        <!-- Navigation -->
     <nav class="navbar">
-      <div class="max-width">
+      <div class="nav-container">
         <!-- Navbar Logo -->
         <div class="logo">
           <a href="#">Portfo<span>lio...</span> </a>
@@ -51,14 +59,14 @@
         </div>
 
         <!-- Navbar List Content -->
-        <div class="navbarList">
+        <div class="nav-menu">
           <a href="#">Home</a>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
-          <a href="#projects">projects</a>
-          <a href="#Certifications">Certifications</a>
-          <a href="#contact">contact</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </div>
+      </div>
       </div>
     </nav>
 
@@ -68,9 +76,8 @@
         <a href="#">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">projects</a>
-        <a href="#Certifications">Certifications</a>
-        <a href="#contact">contact</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
 
@@ -103,44 +110,42 @@
             <div>
               <div class="wrapper">
                 <div class="wrapperIcons">
-                  <div class="iconContent">
-                    <div class="icon">
-                      <a
-                        href="https://www.linkedin.com/in/ssvj777/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <i class="fab fa-linkedin"></i
-                      ></a>
+                  <a
+                    href="https://www.linkedin.com/in/ssvj777/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div class="iconContent">
+                      <div class="icon">
+                        <i class="fab fa-linkedin"></i>
+                      </div>
+                      <span>LinkedIn </span>
                     </div>
-                    <span>LinkedIn </span>
-                  </div>
+                  </a>
 
-                  <div class="iconContent">
-                    <div class="icon">
-                      <a
-                        href="https://github.com/ssvj777"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <i class="fab fa-github"></i
-                      ></a>
+                  <a
+                    href="https://github.com/ssvj777"
+                    target="_blank"
+                    rel="noreferrer"
+                    ><div class="iconContent">
+                      <div class="icon">
+                        <i class="fab fa-github"></i>
+                      </div>
+                      <span>Github </span>
                     </div>
-                    <span>Github </span>
-                  </div>
+                  </a>
 
-                  <div class="iconContent">
-                    <div class="icon">
-                      <a
-                        href="mailto:ssvijaydev@gmail.com"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <i class="fas fa-envelope email-icon"></i
-                      ></a>
+                  <a
+                    href="mailto:vijayssdev@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    ><div class="iconContent">
+                      <div class="icon">
+                        <i class="fas fa-envelope email-icon"></i>
+                      </div>
+                      <span>Email </span>
                     </div>
-                    <span>Email </span>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -169,57 +174,95 @@
       <div class="max-width">
         <h2 class="title titleContent">My Skills</h2>
         <div class="skillsContent">
+          <div class="skillCard">
+            <img
+              src="./assets/img/skills/HTML.png"
+              class="skillIcons"
+              alt="HTML"
+            />
+            <h4>HTML5</h4>
+          </div>
 
-            <div class="skillCard">
-                <img src="./assets/img/skills/HTML.png" class="skillIcons" alt="HTML" />
-                <h4>HTML5</h4>
-            </div>
+          <div class="skillCard">
+            <img
+              src="./assets/img/skills/CSS.png"
+              class="skillIcons"
+              alt="CSS"
+            />
+            <h4>CSS3</h4>
+          </div>
 
-            <div class="skillCard">
-                <img src="./assets/img/skills/CSS.png" class="skillIcons" alt="CSS" />
-                <h4>CSS3</h4>
-            </div>
+          <div class="skillCard">
+            <img
+              src="./assets/img/skills/javascript.png"
+              class="skillIcons"
+              alt="JavaScript"
+            />
+            <h4>JavaScript</h4>
+          </div>
 
-            <div class="skillCard">
-                <img src="./assets/img/skills/javascript.png" class="skillIcons" alt="JavaScript" />
-                <h4>JavaScript</h4>
-            </div>
+          <div class="skillCard">
+            <img
+              src="./assets/img/skills/React.png"
+              class="skillIcons"
+              alt="React.js"
+            />
+            <h4>React.js</h4>
+          </div>
 
-            <div class="skillCard">
-                <img src="./assets/img/skills/React.png" class="skillIcons" alt="React.js" />
-                <h4>React.js</h4>
-            </div>   
-            
-            <div class="skillCard">
-                <img src="./assets/img/skills/Vite.png" class="skillIcons" alt="Vite" />
-                <h4>Vite</h4>
-            </div>
+          <div class="skillCard">
+            <img
+              src="./assets/img/skills/Vite.png"
+              class="skillIcons"
+              alt="Vite"
+            />
+            <h4>Vite</h4>
+          </div>
 
-            <div class="skillCard">
-                <img src="./assets/img/skills/Bootstrap.png" class="skillIcons" alt="Bootstrap" />
-                <h4>Bootstrap</h4>
-            </div>
+          <div class="skillCard">
+            <img
+              src="./assets/img/skills/Bootstrap.png"
+              class="skillIcons"
+              alt="Bootstrap"
+            />
+            <h4>Bootstrap</h4>
+          </div>
 
-            <div class="skillCard">
-                <img src="./assets/img/skills/MaterialUI.png" class="skillIcons" alt="Material UI" />
-                <h4>Material UI</h4>
-            </div>      
-            
-            <div class="skillCard">
-                <img src="./assets/img/skills/Redux.png" class="skillIcons" alt="Redux" />
-                <h4>Redux</h4>
-            </div>                                    
+          <div class="skillCard">
+            <img
+              src="./assets/img/skills/MaterialUI.png"
+              class="skillIcons"
+              alt="Material UI"
+            />
+            <h4>Material UI</h4>
+          </div>
 
-            <div class="skillCard">
-                <img src="./assets/img/skills/Python.png" class="skillIcons" alt="Python" />
-                <h4>Python</h4>
-            </div>       
+          <div class="skillCard">
+            <img
+              src="./assets/img/skills/Redux.png"
+              class="skillIcons"
+              alt="Redux"
+            />
+            <h4>Redux</h4>
+          </div>
 
-            <div class="skillCard">
-                <img src="./assets/img/skills/MySQL.png" class="skillIcons" alt="MySQL" />
-                <h4>MySQL</h4>
-            </div>   
+          <div class="skillCard">
+            <img
+              src="./assets/img/skills/Python.png"
+              class="skillIcons"
+              alt="Python"
+            />
+            <h4>Python</h4>
+          </div>
 
+          <div class="skillCard">
+            <img
+              src="./assets/img/skills/MySQL.png"
+              class="skillIcons"
+              alt="MySQL"
+            />
+            <h4>MySQL</h4>
+          </div>
         </div>
       </div>
     </section>
@@ -229,158 +272,269 @@
       <div class="max-width">
         <h2 class="title titleContent">My Projects</h2>
         <div class="projectsContents">
-
-                
-                <div class="projectDetails">
-                    <img src="./assets/img/projects/ReactProject.png" alt="React E-Commerce Project" />
-                    <div class="projectInfo">
-                        <h3>React E-Commerce Project</h3>
-                        <p>React.js, Vite, HTML, CSS, JavaScript</p>
-                        <a href="https://ssvj777-reactproject.netlify.app/" target="_blank">View Project</a>
-                    </div>
-                </div>
-                
-                <div class="projectDetails">
-                    <img src="./assets/img/projects/Shoppiee.png" alt="Shoppiee Website" />
-                    <div class="projectInfo">
-                        <h3>Shoppiee Website</h3>
-                        <p>HTML, CSS, JavaScript</p>
-                        <a href="https://ssvj777-shoppiee.netlify.app/" target="_blank">View Project</a>
-                    </div>
-                </div>
-                <div class="projectDetails">
-                    <img src="./assets/img/projects/avms.jpg" alt="AVMS" />
-                    <div class="projectInfo">
-                        <h3>Apartment Visitors Management System</h3>
-                        <p>HTML, CSS, JavaScript, PHP, MySQL</p>
-                        <a href="https://ssvj777-avms.netlify.app/" target="_blank">View Project</a>
-                    </div>
-                </div> 
-
-                <div class="projectDetails">
-                    <img src="./assets/img/projects/DEAT.jpg" alt="Digital Evidence Analyzer Tool" />
-                    <div class="projectInfo">
-                        <h3>Digital Evidence Analyzer Tool</h3>
-                        <p>Python</p>
-                        <a href="https://github.com/ssvj777/Digital-Evidence-Analyzer-Tool" target="_blank">Source Code</a>
-                    </div>
-                </div> 
-                
-                <div class="projectDetails">
-                    <img src="./assets/img/projects/BFA.jpg" alt="Brute Force System Analyzer Tool" />
-                    <div class="projectInfo">
-                        <h3>Brute Force System Analyzer Tool</h3>
-                        <p>Python</p>
-                        <a href="https://github.com/ssvj777/Brute-Force-Analyzer-Tool" target="_blank">Source Code</a>
-                    </div>
-                </div>                 
-              
+          <div class="projectDetails">
+            <img
+              src="./assets/img/projects/ReactProject.png"
+              alt="React E-Commerce Project"
+            />
+            <div class="projectInfo">
+              <h3>React E-Commerce Project</h3>
+              <p>React.js, Vite, HTML, CSS, JavaScript</p>
+              <a
+                href="https://ssvj777-reactproject.netlify.app/"
+                target="_blank"
+                >View Project</a
+              >
+            </div>
           </div>
+
+          <div class="projectDetails">
+            <img
+              src="./assets/img/projects/Shoppiee.png"
+              alt="Shoppiee Website"
+            />
+            <div class="projectInfo">
+              <h3>Shoppiee Website</h3>
+              <p>HTML, CSS, JavaScript</p>
+              <a href="https://ssvj777-shoppiee.netlify.app/" target="_blank"
+                >View Project</a
+              >
+            </div>
           </div>
-          </section>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem impedit ex
-    voluptate aliquid nam iste illo. At repellat facilis ratione molestias? Rem,
-    a, at obcaecati delectus molestias voluptates, doloremque aspernatur quae
-    quibusdam natus dolores sunt error cumque? Eum deserunt delectus possimus
-    repudiandae eaque impedit odit ex labore mollitia, eos nobis est facere,
-    pariatur praesentium rerum quas, corrupti officia? Sint ab ipsam incidunt
-    quibusdam delectus animi nulla asperiores, aut quos quod tempore excepturi
-    hic, mollitia assumenda sed voluptatum consequatur. Maiores, enim
-    consequuntur vitae itaque odio dicta beatae, at magnam voluptatum, natus
-    veniam nesciunt nulla quasi dolore laudantium iste illum asperiores! Ullam
-    modi, ut error inventore at tempora commodi id sint saepe amet eligendi
-    architecto laborum vero debitis. Numquam, corporis totam! Eius beatae iure
-    dicta ex ipsum necessitatibus maxime provident tenetur dolores, accusamus
-    vitae error explicabo mollitia ab laudantium quaerat! Itaque, unde accusamus
-    nemo harum voluptatibus neque ad molestias repellat consequuntur ea, quia
-    amet quam minus dicta id. Voluptatum quidem quibusdam eaque dolorem dolores
-    cumque odio laborum, unde explicabo voluptates tenetur possimus quis
-    veritatis ad minima? Similique, necessitatibus et. Velit sequi aliquid nemo
-    quas possimus, consectetur temporibus aut magnam. Quae mollitia dolorem
-    molestiae quidem, facere similique illum non illo cumque blanditiis
-    repudiandae dolore iusto et, dolorum commodi adipisci inventore quaerat
-    beatae reprehenderit cum veniam, iure quia eius hic. Fugit, excepturi
-    repellat voluptates, rem possimus dolorum ea quos iure cumque nesciunt
-    commodi quas in optio ducimus eius, vitae id unde nihil esse? Pariatur
-    aperiam ex eveniet quo molestias cum ad inventore excepturi incidunt
-    corporis dolorem fugiat, dolore illum architecto quidem vitae perspiciatis
-    voluptates. Consequuntur facere tempore doloribus est eos minus nam sequi
-    totam dolorum, repudiandae error, dolorem nemo eaque quas culpa similique,
-    reiciendis tempora libero nostrum ullam autem velit ex odio. Inventore
-    asperiores voluptates accusamus iusto cum sapiente consectetur. Id dicta
-    itaque distinctio facilis tempora, dolor ratione ipsum labore optio,
-    commodi, illum adipisci culpa ea? Voluptate voluptatum provident fuga neque
-    qui sit nostrum? Dicta provident aliquam eligendi dolorum distinctio
-    eveniet, vero, perferendis, autem aperiam expedita consequuntur. Incidunt,
-    modi voluptatem! Provident mollitia accusantium officiis sapiente eligendi
-    quae iusto voluptatum eum cumque debitis magnam atque, voluptas, aperiam
-    veniam corporis corrupti ut ab dolore? Eveniet aperiam veniam, quae labore
-    laboriosam voluptatum, neque delectus, dignissimos aliquam sapiente
-    quibusdam! Voluptatum nesciunt laborum ullam accusantium architecto est? In
-    aut, incidunt odio aperiam vel, dicta error accusamus earum doloribus totam
-    impedit maiores dolore? Fugiat quos reiciendis voluptatibus! Sunt nihil
-    nobis ad ducimus nemo, dolore rem aliquid inventore eligendi non odit
-    exercitationem amet iste sit assumenda! Recusandae ad debitis reiciendis ex
-    enim officia voluptatibus suscipit ipsam amet maiores, illo a, ipsum
-    repellat, rem quasi. Expedita minima amet non ratione, repellat sequi
-    obcaecati eveniet vero unde illum in, dolore, ipsum nihil accusantium nemo
-    doloremque et neque aliquam odio illo commodi ullam eum. Aliquam provident
-    tempore fuga facilis dolorum alias facere quisquam tempora placeat voluptate
-    ipsum ipsam, blanditiis impedit vitae obcaecati corporis. Voluptates nobis
-    velit, itaque vel sit rerum hic exercitationem similique, repellendus totam
-    cupiditate soluta. In fugiat earum nobis excepturi laboriosam minus
-    adipisci, molestias commodi esse ut quo quos porro iste, molestiae labore!
-    Consequatur saepe tempora dicta veritatis magnam dolores cupiditate
-    molestiae, illum quidem mollitia ad eaque, accusamus dignissimos culpa
-    deserunt repellat temporibus ratione magni dolorum officia eligendi beatae
-    quae cum quia. Numquam enim dolore laborum dignissimos, illum animi itaque
-    dolor saepe nulla aperiam voluptas consequatur reiciendis odit tempore optio
-    dolores expedita in blanditiis iste vel quaerat, officiis cumque molestias
-    aut? Doloribus ipsum quas numquam, quidem nemo, vel sequi itaque blanditiis
-    assumenda commodi nam cumque nihil quis aspernatur atque minus molestias
-    perspiciatis asperiores iusto dicta laborum! Atque, iste officia tempore
-    aliquid excepturi earum quos assumenda saepe, reprehenderit maiores dolores
-    ducimus voluptates! Voluptates in illo necessitatibus rem ex, corrupti
-    placeat quisquam deserunt eveniet similique aliquam quibusdam modi nesciunt
-    quas nisi minima officiis aperiam dolore! Assumenda expedita quae recusandae
-    ratione voluptates ipsam omnis, itaque iure ullam nulla laudantium incidunt
-    voluptas? Dicta, excepturi veritatis. Ab eius consequatur incidunt culpa est
-    sed iusto quos neque suscipit. Quibusdam inventore quo rem, quidem iure
-    reiciendis voluptatibus eaque, necessitatibus, aliquid est odit
-    exercitationem cumque explicabo quasi ipsa. Quae ad reiciendis doloremque.
-    Autem beatae corrupti eius excepturi id dolorem possimus, veniam voluptatum
-    deleniti veritatis quos. Atque qui neque doloremque maxime cumque quidem eos
-    minima architecto dolore cupiditate. Praesentium placeat ex dicta? Ipsam
-    necessitatibus at numquam id repellat autem laudantium itaque dolorem
-    accusantium harum, velit nisi iure facere quo illum! Quibusdam fugit quos
-    fugiat nulla perspiciatis nisi ipsa, voluptates in. Exercitationem mollitia
-    consequuntur quisquam neque nisi omnis amet voluptas tenetur, corrupti quas
-    sit rerum dolor facilis est eveniet expedita deserunt adipisci reprehenderit
-    cupiditate perspiciatis praesentium ipsam numquam, voluptatum dicta!
-    Recusandae nulla repellat vitae tenetur minus eaque magnam beatae sint, non
-    corrupti cumque incidunt inventore rerum temporibus ipsum fuga hic dolor
-    blanditiis sunt assumenda corporis. Cum facere dicta eos fugit, possimus,
-    praesentium laudantium beatae non quidem laborum, asperiores architecto
-    rerum nulla! Provident ipsa impedit neque qui eum consectetur aliquam
-    facilis culpa enim, sapiente harum nam veniam quae quidem, atque similique
-    eveniet, cumque assumenda temporibus quibusdam ad sunt officiis. Esse rerum
-    perferendis tenetur sit. Enim animi veniam quos minima. Id magnam beatae
-    ipsum similique tempora aliquid quae nemo quo. Iusto dolorum ipsa, non amet,
-    impedit veritatis totam tempore possimus vero perspiciatis neque quam vel
-    sequi omnis numquam illo, deleniti consectetur laboriosam quis architecto
-    ducimus similique! Sed illum inventore placeat saepe quam aperiam eum dolore
-    aut odit perferendis tenetur incidunt consequatur ut cum expedita autem
-    totam pariatur ipsum, ea dolorum alias sint necessitatibus doloremque
-    cupiditate. In illum voluptates voluptate et beatae cum quaerat dignissimos
-    eveniet, quis dolorum quia reiciendis, quidem aspernatur exercitationem
-    ducimus fugit nisi est, consectetur blanditiis. Sunt repudiandae quae,
-    repellat delectus deserunt ut natus ullam ipsum eligendi? Quibusdam
-    praesentium impedit numquam cupiditate, velit animi nobis aut aliquid vero
-    iste labore cumque et itaque iure veritatis totam sunt laudantium. Laborum
-    accusantium natus enim, quam consequatur facere nihil expedita nam voluptas
-    magnam dolor architecto exercitationem porro tempore tempora sint ipsum
-    blanditiis at sapiente? Id voluptate nulla dolore reiciendis, rem aspernatur
-    neque aperiam corrupti atque!
+          <div class="projectDetails">
+            <img src="./assets/img/projects/avms.jpg" alt="AVMS" />
+            <div class="projectInfo">
+              <h3>Apartment Visitors Management System</h3>
+              <p>HTML, CSS, JavaScript, PHP, MySQL</p>
+              <a href="https://ssvj777-avms.netlify.app/" target="_blank"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <div class="projectDetails">
+            <img
+              src="./assets/img/projects/DEAT.jpg"
+              alt="Digital Evidence System Analyzer Tool"
+            />
+            <div class="projectInfo">
+              <h3>Digital Evidence System Analyzer Tool</h3>
+              <p>Python</p>
+              <a
+                href="https://github.com/ssvj777/Digital-Evidence-Analyzer-Tool"
+                target="_blank"
+                >Source Code</a
+              >
+            </div>
+          </div>
+
+          <div class="projectDetails">
+            <img
+              src="./assets/img/projects/BFA.jpg"
+              alt="Brute Force System Analyzer Tool"
+            />
+            <div class="projectInfo">
+              <h3>Brute Force System Analyzer Tool</h3>
+              <p>Python</p>
+              <a
+                href="https://github.com/ssvj777/Brute-Force-Analyzer-Tool"
+                target="_blank"
+                >Source Code</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications section start -->
+    <section class="Certifications" id="Certifications">
+      <div class="max-width">
+        <h2 class="title titleContent">My Certifications</h2>
+        <div class="certificationsContent">
+          <div class="certificationDetails">
+            <img
+              src="./assets/img/certifications/FullStack.jpg"
+              alt="Full-Stack Development"
+            />
+            <div class="certificationInfo">
+              <h3>Full-Stack Development</h3>
+              <p>Issued by: Live-wire, Erode</p>
+              <a
+                href="https://drive.google.com/file/d/15FWtCFQK7KZGRsgP5HWh9YAmOjL1IC1P/view?usp=drivesdk"
+                target="_blank"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+
+          <div class="certificationDetails">
+            <img
+              src="./assets/img/certifications/Python.jpg"
+              alt="Python Basics"
+            />
+            <div class="certificationInfo">
+              <h3>Python Basics</h3>
+              <p>Issued by: SCALER</p>
+              <a
+                href="https://drive.google.com/file/d/1ASyz31A-iIbyiUpecNphMacixucyUtxm/view?usp=drivesdk"
+                target="_blank"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+
+          <div class="certificationDetails">
+            <img
+              src="./assets/img/certifications/Networking Basics.jpg"
+              alt="Networking Basics"
+            />
+            <div class="certificationInfo">
+              <h3>Networking Basics</h3>
+              <p>Issued by: CISCO</p>
+              <a
+                href="https://drive.google.com/file/d/1Em7cm9YVzW840tKtvNQ3mJPn0rGahVoL/view?usp=drive_link"
+                target="_blank"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+
+          <div class="certificationDetails">
+            <img
+              src="./assets/img/certifications/Cybersecurity.png"
+              alt="Basics of Cyber Security"
+            />
+            <div class="certificationInfo">
+              <h3>Basics of Cyber Security</h3>
+              <p>Issued by: NPTEL</p>
+              <a
+                href="https://drive.google.com/file/d/1V3JBj8_qQiFfPkcFtqSSLbD7167MBz7j/view?usp=sharing"
+                target="_blank"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section start -->
+    <section class="contact" id="contact">
+      <div class="max-width">
+        <h2 class="title titleContent">Contact Me</h2>
+        <div class="contactContent">
+          <div class="contactDetails">
+            <div class="text">Reach Out to me!</div>
+            <div class="icons">
+              <div class="row">
+                <i class="fas fa-user"></i>
+                <div class="info">
+                  <div class="head">Name</div>
+                  <div class="sub-title">VIJAY SS</div>
+                </div>
+              </div>
+              <div class="row">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="info">
+                  <div class="head">Address</div>
+                  <div class="sub-title">Coimbatore, TamilNadu</div>
+                </div>
+              </div>
+              <div class="row">
+                <i class="fas fa-envelope email-icon"></i>
+                <div class="info">
+                  <div class="email">
+                    <div class="head">Email</div>
+                    <div class="sub-title">
+                      <a href="mailto:vijayssdev@gmail.com" target="_blank"
+                        >vijayssdev@gmail.com</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="iconSession">
+            <div class="text1">Stay Connected</div>
+            <div>
+              <div class="wrapper">
+                <div class="wrapperIcons">
+                  <a
+                    href="https://www.linkedin.com/in/ssvj777/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div class="iconContent">
+                      <div class="icon">
+                        <i class="fab fa-linkedin"></i>
+                      </div>
+                      <span>LinkedIn </span>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://github.com/ssvj777"
+                    target="_blank"
+                    rel="noreferrer"
+                    ><div class="iconContent">
+                      <div class="icon">
+                        <i class="fab fa-github"></i>
+                      </div>
+                      <span>Github </span>
+                    </div>
+                  </a>
+
+                  <a
+                    href="mailto:vijayssdev@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    ><div class="iconContent">
+                      <div class="icon">
+                        <i class="fas fa-envelope email-icon"></i>
+                      </div>
+                      <span>Email </span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <div class="education">
+            <div>
+              <h1>Education</h1>
+            </div>
+            <div class="degree">
+                <div>
+              <p>MSc <span class="msc"></span></p>
+              <p>Bharathiar University, Coimbatore (2025)</p>
+              </div>
+              <div>
+              <p>BSc <span class="bsc"></span></p>
+              <p>Bharathidasan College of Arts and Science, Erode (2023)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section start -->
+    <footer>
+      <h4>
+        Created By
+        <a
+          href="https://www.linkedin.com/in/ssvj777/"
+          target="_blank"
+          rel="noreferrer"
+          >VIJAY</a
+        >
+        | <i class="fa fa-copyright" aria-hidden="true"></i>
+        <span id="year"></span>
+      </h4>
+    </footer>
 
     <!-- External Typed js script Link -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
