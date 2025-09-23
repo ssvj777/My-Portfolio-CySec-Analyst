@@ -86,7 +86,6 @@ body {
   color: white;
   border: none;
   border-radius: 50%;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,6 +95,10 @@ body {
   transform: translateY(100px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
+}
+
+.scroll-top i {
+    cursor: pointer;
 }
 
 .scroll-top.visible {

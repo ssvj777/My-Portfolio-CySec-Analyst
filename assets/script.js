@@ -84,31 +84,6 @@ new Typed(".role", {
   cursorChar: "|",
 });
 
-new Typed(".typing2", {
-  strings: animationScript,
-  typeSpeed: 100,
-  backSpeed: 60,
-  loop: true,
-  showCursor: false,
-});
-
-// Typing animation for Cyber Security
-new Typed(".msc", {
-  strings: ["Cyber Security"],
-  typeSpeed: 100,
-  backSpeed: 60,
-  loop: true,
-  showCursor: false,
-});
-
-// Typing animation for Computer Science
-new Typed(".bsc", {
-  strings: ["Computer Science"],
-  typeSpeed: 100,
-  backSpeed: 60,
-  loop: true,
-  showCursor: false,
-});
 
 // Get the current year
 const currentYear = new Date().getFullYear();
