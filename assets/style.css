@@ -384,7 +384,7 @@ section .title::after {
   overflow: hidden;
   border-radius: 35px;
   transition: all 0.3s ease-in-out;
-
+  border: none;
   margin-left: 3px;
   margin-right: 7px;
 }
@@ -394,6 +394,7 @@ section .title::after {
   text-align: center;
   border-radius: 35px;
   display: inline-block;
+    border: none;
   transition: all 0.3s ease-in-out;
 }
 
@@ -418,7 +419,7 @@ section .title::after {
 }
 
 .iconContent:hover .icon {
-  background: var(--primary);
+   background: var(--bg-secondary);
 }
 
 /* About Styling... */
