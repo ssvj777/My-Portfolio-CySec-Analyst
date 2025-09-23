@@ -286,7 +286,7 @@ body {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1rem ;
+  margin-bottom: 1rem;
 }
 
 .home-buttons {
@@ -331,25 +331,8 @@ body {
   color: var(--primary);
 }
 
-/* Common Styling for Upcoming Sessions */
-.about,
-.skills,
-.projects,
-.Certifications,
-.contact,
-footer {
-  font-family: "Poppins", sans-serif;
-  width: 100vw;
-}
-.about .aboutContent,
-.skills .skillsContent,
-.contact .contactContent {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-}
-section .titleContent {
+/* Common Styling for Sessions Title Content*/
+section .title {
   position: relative;
   text-align: center;
   font-size: 40px;
@@ -357,26 +340,27 @@ section .titleContent {
   margin-bottom: 30px;
   padding-bottom: 22px;
   font-family: "Ubuntu", sans-serif;
-  padding-top: 123px;
+  padding-top: 111px;
+  font-style: italic;
 }
-section .titleContent::before {
+section .title::before {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 7px;
   left: 50%;
   width: 180px;
   height: 3px;
-  background: #111;
+  background: var(--gradient);
   transform: translateX(-50%);
 }
 
-section .titleContent::after {
+section .title::after {
   position: absolute;
-  bottom: -12px;
+  bottom: -10px;
   left: 50%;
   padding: 5px;
   font-size: 20px;
-  color: rgb(7, 67, 196);
+  color: var(--primary);
   transform: translateX(-50%);
 }
 
@@ -392,11 +376,12 @@ section .titleContent::after {
   width: 45px;
   height: 45px;
   cursor: pointer;
-  background: #fff;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
   overflow: hidden;
   border-radius: 35px;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+
   margin-left: 3px;
   margin-right: 7px;
 }
@@ -412,70 +397,98 @@ section .titleContent::after {
 .iconContent .icon i {
   font-size: 18px;
   line-height: 44px;
-  color: rgb(7, 67, 196);
+  color: var(--text-primary);
   transition: all 0.3s ease-in-out;
 }
 .iconContent:hover {
   width: 144px;
 }
 .iconContent:hover i {
-  color: #fff;
+  color: var(--text-primary);
 }
 .iconContent span {
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 555;
   line-height: 10px;
   margin-left: 5px;
-  color: rgb(7, 67, 196);
+  color: var(--text-primary);
 }
 
 .iconContent:hover .icon {
-  background: #0097a7;
-}
-
-.iconContent span a {
-  color: #0097a7;
+  background: var(--primary);
 }
 
 /* About Styling... */
 .about {
-  background: var(--text);
+  background: var(--bg-secondary);
   padding-bottom: 44px;
 }
-.about .titleContent::after {
+.about .title::after {
   content: "who am i";
-  background: var(--text);
+  background: var(--bg-secondary);
 }
-.about .aboutContent .aboutImage {
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.about-image {
   width: 30%;
-  margin-left: 5%;
+  margin-left: 7%;
 }
-.about .aboutContent .aboutImage img {
+
+.about-image img {
   height: 333px;
   width: 260px;
   object-fit: cover;
   border-radius: 20px;
   margin-bottom: 5px;
 }
-.about .aboutContent .aboutDetails {
-  width: 55%;
-  margin-right: 7%;
-  height: 257px;
+
+.about-details {
+  width: 56%;
+  margin-right: 5%;
+  height: 100%;
+  display: grid;
+  gap: 22px;
+  margin-bottom: 33px;
 }
-.about .aboutContent .aboutDetails .text {
+
+.about-details h3 {
+  font-size: 1.7rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.about-details p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.about-education .degree {
+  font-weight: 600;
+}
+
+.about-education .college {
+  margin-bottom: 0.5rem;
+}
+
+.about .about-content .aboutDetails .text {
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 10px;
 }
-.about .aboutContent .aboutDetails .text span {
+.about .about-content .aboutDetails .text span {
   color: rgb(7, 67, 196);
 }
-.about .aboutContent .aboutDetails p {
+.about .about-content .aboutDetails p {
   text-align: justify;
   line-height: 1.6;
   letter-spacing: 1px;
 }
-.about .aboutContent .aboutDetails a {
+.about .about-content .aboutDetails a {
   display: inline-block;
   background: rgb(7, 67, 196);
   color: #fff;
@@ -782,7 +795,7 @@ footer a {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .nav-container {
     padding-left: 47px;
     padding-right: 13px;
@@ -814,7 +827,6 @@ footer a {
     padding: 3px;
   }
 
-
   /* Home Mobile View */
   .home .home-content .text2 {
     font-size: 69px;
@@ -822,25 +834,31 @@ footer a {
   .home .home-content .text3 {
     font-size: 33px;
   }
-  .about .aboutContent .aboutImage {
-    width: 100%;
-    margin: 0;
-    display: grid;
-    justify-content: center;
-    gap: 13px;
-  }
 
-  .about .aboutContent .aboutImage .wrapper {
-    margin: 0 auto 10px;
-  }
-  .about .aboutContent .aboutDetails {
-    flex: 100%;
-    margin-top: 30px;
-    margin-right: 13px;
-  }
-  .about .aboutContent .aboutDetails .text {
-    display: grid;
-  }
+    /* About Session Mobile View */
+.about-image {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+.about-image img {
+  align-self: center;
+}
+
+.about-details {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+}
+
+.wrapperIcons {
+  width: 100%;
+  margin-top: 13px;
+}
+
   .contact .max-width {
     margin: 0px;
   }
@@ -876,7 +894,6 @@ footer a {
 }
 
 @media (max-width: 700px) {
-  
   /* Home Mobile View */
   .home .home-content .text2 {
     font-size: 55px;
@@ -887,7 +904,6 @@ footer a {
 }
 
 @media (max-width: 500px) {
-
   /* Home Mobile View */
   .home .home-content .text2 {
     font-size: 47px;
