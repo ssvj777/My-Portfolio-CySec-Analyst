@@ -30,7 +30,7 @@ scrollTop.addEventListener("click", () => {
 
 const navbarScroll = document.querySelector(".navbar");
 
-window.addEventListener("scroll", ()=> {
+window.addEventListener("scroll", () => {
   if (window.scrollY > 28) {
     navbarScroll.classList.add("scrolled");
   } else {
@@ -83,7 +83,6 @@ new Typed(".role", {
   showCursor: true,
   cursorChar: "|",
 });
-
 
 // Get the current year
 const currentYear = new Date().getFullYear();
