@@ -479,51 +479,25 @@ section .title::after {
   margin-bottom: 0.5rem;
 }
 
-.about .about-content .aboutDetails .text {
-  font-size: 25px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-.about .about-content .aboutDetails .text span {
-  color: rgb(7, 67, 196);
-}
-.about .about-content .aboutDetails p {
-  text-align: justify;
-  line-height: 1.6;
-  letter-spacing: 1px;
-}
-.about .about-content .aboutDetails a {
-  display: inline-block;
-  background: rgb(7, 67, 196);
-  color: #fff;
-  font-size: 25px;
-  font-weight: 500;
-  padding: 3px 25px;
-  margin-top: 20px;
-  border-radius: 6px;
-  border: 2px solid rgb(7, 67, 196);
-  transition: all 0.3s ease;
-}
-
 /* Skill Session Styling... */
 .skills {
-  background: #f4f4f4;
   padding-bottom: 44px;
 }
-.skills .titleContent::after {
+.skills .title::after {
   content: "what i have";
-  background: #f4f4f4;
+  background: var(--bg-primary);
 }
 
-.skillsContent {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 28px;
+.skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 47px;
   justify-content: space-around;
+  padding: 7px 100px;
 }
 
-.skillCard {
-  background: white;
+.skill-card {
+        background: var(--bg-secondary);
   border-radius: 17px;
   padding: 25px 15px;
   text-align: center;
@@ -532,7 +506,7 @@ section .title::after {
   max-width: 180px;
 }
 
-.skillCard:hover {
+.skill-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
@@ -544,9 +518,9 @@ section .title::after {
   margin-bottom: 10px;
 }
 
-.skillCard h4 {
+.skill-card h4 {
   font-size: 18px;
-  color: #333;
+  color: var(--text-primary);
   font-weight: 700;
 }
 
@@ -800,6 +774,8 @@ footer a {
 }
 
 @media (max-width: 950px) {
+
+  /* Mobile View Navigation Bar Styling... */
   .nav-container {
     padding-left: 47px;
     padding-right: 13px;
@@ -839,7 +815,7 @@ footer a {
     font-size: 33px;
   }
 
-    /* About Session Mobile View */
+  /* About Session Mobile View */
 .about-image {
   margin: 0;
   display: flex;
@@ -863,6 +839,10 @@ footer a {
   margin-top: 13px;
 }
 
+.skills-content {
+  padding: 3px 17px;
+  gap: 28px;
+}
   .contact .max-width {
     margin: 0px;
   }
