@@ -615,6 +615,7 @@ section .title::after {
 
 .project-details:hover .projectInfo {
   opacity: 1;
+    border-radius: 17px;
 }
 
 .projectInfo h3 {
