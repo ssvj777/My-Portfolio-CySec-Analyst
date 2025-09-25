@@ -527,41 +527,112 @@ section .title::after {
 
 /* Projects Section Styling*/
 .projects {
-  background: var(--bg);
+  background: var(--bg-secondary);
   padding-bottom: 55px;
-  color: var(--text);
+  color: var(--text-primary);
 }
-.projects .titleContent::before {
-  background: var(--text);
+.projects .title::before {
+  width: 190px;
 }
-.projects .titleContent::after {
-  content: "Check My Work";
-  background: var(--bg);
+.projects .title::after {
+  content: "check my work";
+  background: var(--bg-secondary);
 }
 
-.projectsContents,
-.certificationsContent {
+.container {
+  max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 2rem;
+}
+
+.projects-contents {
   display: flex;
-  gap: 30px;
+  gap: 47px;
   flex-wrap: wrap;
-  margin-top: 40px;
-}
 
-.projectDetails,
-.certificationDetails {
+}
+.project-container{
+           background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 377px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            gap: 17px;
+            padding: 13px 7px;
+            height: auto;
+}
+.project-info{
+  text-align: center;
+}
+.project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+          font-size: 16px;
+            padding: 1px 7px;
+        } 
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            justify-content: space-around;
+            padding: 1px 28px;
+        }
+
+        .tech-tag {
+            padding: 0.25rem 0.75rem;
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            border-radius: 20px;
+            font-size: 0.875rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            padding: 0.5rem 1rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            
+            border-radius: var(--radius);
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: var(--gradient);
+            
+        }
+
+
+.project-details{
   position: relative;
   width: 340px;
   height: 222px;
   overflow: hidden;
   border-radius: 17px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  
   cursor: pointer;
   margin: 7px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-secondary);
 }
 
-.projectDetails img,
-.certificationDetails img {
+.project-details img{
   width: 100%;
   height: 100%;
   padding: 13px;
@@ -570,8 +641,7 @@ section .title::after {
   transition: all 0.5s ease;
 }
 
-.projectInfo,
-.certificationInfo {
+.projectInfo {
   position: absolute;
   top: 0;
   left: 0;
@@ -590,48 +660,31 @@ section .title::after {
   transition: opacity 0.5s ease;
 }
 
-.projectDetails:hover img,
-.certificationDetails:hover img {
+.project-details:hover img{
   transform: scale(1.1);
   filter: blur(2px);
 }
 
-.projectDetails:hover .projectInfo,
-.certificationDetails:hover .certificationInfo {
+.project-details:hover .projectInfo{
   opacity: 1;
 }
 
-.projectInfo h3,
-.certificationInfo h3 {
+.projectInfo h3 {
   font-size: 22px;
   margin-bottom: 10px;
   font-weight: 700;
 }
 
-.projectInfo p,
-.certificationInfo p {
+.projectInfo p{
   font-size: 17px;
   margin-bottom: 10px;
   font-weight: 600;
   color: #f4f4f4;
 }
 
-.projectInfo a,
-.certificationInfo a {
-  padding: 6px 14px;
-  background: #fff;
-  color: #000;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: 700;
-  transition: 0.3s;
-}
 
-.projectInfo a:hover,
-.certificationInfo a:hover {
-  background: #000;
-  color: #fff;
-}
+
+
 
 /* Certifications Section Styling*/
 .Certifications {
@@ -768,12 +821,13 @@ footer a {
 
 /* Mobile Screen Responsive Styling */
 @media (max-width: 1300px) {
-  .projectsContents,
-  .certificationsContent {
-    justify-content: space-around;
-  }
+    .projects-contents {
+  justify-content: space-around;
 }
-
+.container {
+            padding: 0;
+}
+}
 @media (max-width: 950px) {
   /* Mobile View Navigation Bar Styling... */
   .nav-container {
@@ -875,6 +929,10 @@ footer a {
   .contact .education h1 {
     text-align: center;
   }
+
+    /* Project Mobile View */
+
+
 }
 
 @media (max-width: 700px) {
@@ -885,6 +943,8 @@ footer a {
   .home .home-content .text3 {
     font-size: 33px;
   }
+
+
 }
 
 @media (max-width: 500px) {
