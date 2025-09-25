@@ -604,6 +604,7 @@ section .title::after {
   text-align: center;
   padding: 10px;
   transition: opacity 0.5s ease;
+    border-radius: 17px;
 }
 
 .project-details:hover img {
@@ -821,7 +822,7 @@ footer a {
     justify-content: space-around;
   }
   .container {
-    padding: 0;
+    padding: 0 1.7rem;
   }
 }
 @media (max-width: 950px) {
@@ -927,6 +928,11 @@ footer a {
   }
 
   /* Project Mobile View */
+  .projects-contents {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
 }
 
 @media (max-width: 700px) {
