@@ -513,8 +513,8 @@ section .title::after {
 }
 
 .skillIcons {
-  width: 137px;
-  height: 77px;
+  width: 128px;
+  height: 69px;
   object-fit: contain;
   margin-bottom: 10px;
 }
@@ -684,138 +684,116 @@ section .title::after {
   background: var(--gradient);
 }
 
-/* Certifications Section Styling*/
-.Certifications {
-  background: #0d1117;
-  padding-bottom: 55px;
-  color: var(--text);
-}
-.Certifications .titleContent::before {
-  background: var(--text);
-  width: 208px;
-}
-.Certifications .titleContent::after {
-  content: "What I Have Done";
-  background: #0d1117;
-}
 
 /* Contact Session Styling... */
 .contact {
-  background: var(--bg);
   padding-bottom: 55px;
-  color: var(--text);
-}
-.contact .contactContent {
-  justify-content: space-between;
-}
-.contact .titleContent::before {
-  background: var(--text);
-  width: 208px;
-}
-.contact .titleContent::after {
-  content: "Get In Touch";
-  background: var(--bg);
+  color: var(--text-primary);
 }
 
-.contact .contactContent .contactDetails {
-  width: 40%;
-  margin-left: 3%;
+.contact .title::after {
+  content: "get in touch";
+  background: var(--bg-primary);
 }
 
-.contact .contactContent .contactDetails .text {
-  margin-top: 20px;
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: rgb(7, 67, 196);
-}
 
-.contactDetails .icons {
-  margin: 12px 0;
-}
-.contactDetails .icons .row {
+.contact .contact-content {
   display: flex;
-  height: 65px;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-.contactDetails .icons .row i {
-  font-size: 25px;
-  color: rgb(7, 67, 196);
-}
+.contact-details h3 {
+            font-size: 2rem;
+            margin-bottom: 1.3rem;
+            color: var(--primary);
+        }
 
-.contactDetails .icons .row .info {
-  margin-left: 30px;
-  justify-content: left;
-  float: left;
-}
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
 
-.contactDetails .icons .row .info .email {
-  position: relative;
-  left: -7px;
-}
-.contactDetails .icons .row .info .head {
-  font-weight: 700;
-}
-.contactDetails .icons .row .info .sub-title {
-  color: green;
-  font-weight: 700;
-  position: relative;
-  left: -2px;
-}
-.contactDetails .icons .row .info .sub-title a {
-  color: green;
-}
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-secondary);
+            border-radius: 50%;
+            color: var(--primary);
+        }
 
-.contact .contactContent .contactDetails .text1 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  margin-top: 13px;
-  color: rgb(7, 67, 196);
-}
-.contactDetails .wrapperIcons {
-  position: relative;
-  left: -37px;
-}
-.contact .education .degree {
-  display: grid;
-  justify-content: center;
-  gap: 28px;
-}
-.contact .education {
-  height: 333px;
-  margin-right: 3%;
-}
-.contact .education h1 {
-  margin-top: 20px;
-  font-size: 47px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: rgb(7, 67, 196);
-}
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
 
-.contact .education .degree {
-  margin-top: 13px;
-  font-size: 18px;
-  font-weight: 600;
-}
-.contact .education .degree span {
-  color: green;
-  font-weight: 700;
-}
+        .social-link {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
 
-/* footer section styling */
-footer {
-  background: var(--text);
-  padding: 17px;
-  color: var(--bg);
-  text-align: center;
-  font-size: 22px;
-}
-footer a {
-  color: rgb(7, 67, 196);
-  text-decoration: none;
-}
+        .social-link:hover {
+            background: var(--gradient);
+            transform: translateY(-3px);
+        }
+        .certifications h3 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+        }
+
+
+        .certification-item{
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 17px;
+        }
+
+        .course-name{
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+
+        .course-provider {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+        }
+
+                /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 2px solid var(--border);
+                        font-style: italic;
+
+        }
+
+        .footer p {
+            color: var(--text-muted);
+            font-weight: 700;
+            font-size: 18px;
+                        font-style: italic;
+            
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+
+        }
 
 /* Mobile Screen Responsive Styling */
 @media (max-width: 1300px) {
@@ -895,45 +873,22 @@ footer a {
     padding: 3px 17px;
     gap: 28px;
   }
-  .contact .max-width {
-    margin: 0px;
-  }
-  .contact .contactContent {
-    display: grid;
-    gap: 28px;
-  }
-  .contact .education {
-    margin-right: 0px;
-  }
-  .contact .contactContent .contactDetails,
-  .contact .contactContent .education {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-  }
-  .contact .contactContent .contactDetails .iconSession {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .contactDetails .wrapperIcons {
-    left: 0;
-  }
-  .contact .contactContent .education .degree {
-    padding: 10px;
-  }
-  .contact .education h1 {
-    text-align: center;
-  }
-
+  
   /* Project Mobile View */
   .projects-contents {
   display: flex;
   gap: 28px;
   flex-wrap: wrap;
 }
+
+    /* Contact Session Mobile View */
+.contact-details{
+  margin-bottom: 2rem;
+}
+
+
+        
+
 }
 
 @media (max-width: 700px) {
@@ -957,4 +912,28 @@ footer a {
   .home-description {
     font-size: 1.1rem;
   }
+
+
+  .certifications{
+    width: 100%;
+  }
+  .certifications h3 {
+          margin-top: 1rem;
+          text-align: center;
+        }
+
+                .certification-item{
+            
+            display: grid;
+            gap: 3px;
+            
+        }
+
+                .course-name{
+            padding-left: 17px;
+        }
+
+        .course-provider {
+            padding-left: 28px;
+        }
 }
