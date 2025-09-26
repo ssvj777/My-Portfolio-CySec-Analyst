@@ -1,25 +1,16 @@
-//Loading Screen Script
+const scrollBtn = document.querySelector(".scrollBtn");
 
-window.addEventListener("load", () => {
-  const loading = document.getElementById("loading");
-  setTimeout(() => {
-    loading.classList.add("hidden");
-  }, 700);
-});
-
-// Scroll to Top Button
-
-const scrollTop = document.getElementById("scrollTop");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollTop.classList.add("visible");
+// Show/Hide button on scroll
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 100) {
+    scrollBtn.classList.add("show");
   } else {
-    scrollTop.classList.remove("visible");
+    scrollBtn.classList.remove("show");
   }
 });
 
-scrollTop.addEventListener("click", () => {
+// Scroll to top on click
+scrollBtn.addEventListener("click", function () {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
@@ -27,44 +18,40 @@ scrollTop.addEventListener("click", () => {
 });
 
 //Navbar Script
-
 const navbarScroll = document.querySelector(".navbar");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 28) {
-    navbarScroll.classList.add("scrolled");
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 22) {
+    navbarScroll.classList.add("sticky");
   } else {
-    navbarScroll.classList.remove("scrolled");
+    navbarScroll.classList.remove("sticky");
   }
 });
 
-let mobileViewNavbar = document.querySelector(".mobile-view-navbar");
+let sideNavbar = document.querySelector(".sideNavbar");
 let showToggle = document.querySelector(".showNavbar");
 let showCloseBtn = document.querySelector(".closeNavbar");
 
-document.querySelector(".togglebtn").addEventListener("click", () => {
-  mobileViewNavbar.style.left = "0";
+document.querySelector(".togglebtn").addEventListener("click", function () {
+  sideNavbar.style.left = "0";
   showToggle.style.display = "none";
   showCloseBtn.style.display = "flex";
-  navbarScroll.classList.add("scrolled");
 });
 
-document.querySelector(".xMark").addEventListener("click", () => {
-  mobileViewNavbar.style.left = "-70%";
+document.querySelector(".xMark").addEventListener("click", function () {
+  sideNavbar.style.left = "-70%";
   showToggle.style.display = "flex";
   showCloseBtn.style.display = "none";
 });
 
 // Close the menu when a link is clicked
 
-document.addEventListener("DOMContentLoaded", () => {
-  const listcontents = document.querySelectorAll(
-    ".mobile-view-navbar-menu-list a"
-  );
+document.addEventListener("DOMContentLoaded", function () {
+  const listcontents = document.querySelectorAll(".sideNavbar a");
 
   listcontents.forEach(function (listcontent) {
-    listcontent.addEventListener("click", () => {
-      mobileViewNavbar.style.left = "-70%";
+    listcontent.addEventListener("click", function () {
+      sideNavbar.style.left = "-70%";
       showToggle.style.display = "flex";
       showCloseBtn.style.display = "none";
     });
@@ -75,13 +62,38 @@ document.addEventListener("DOMContentLoaded", () => {
 const animationScript = ["Front-End Developer", "React Developer"];
 
 // Typing animation script start
-new Typed(".role", {
+new Typed(".typing", {
   strings: animationScript,
   typeSpeed: 100,
   backSpeed: 60,
   loop: true,
-  showCursor: true,
-  cursorChar: "|",
+  showCursor: false,
+});
+
+new Typed(".typing2", {
+  strings: animationScript,
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true,
+  showCursor: false,
+});
+
+// Typing animation for Cyber Security
+new Typed(".msc", {
+  strings: ["Cyber Security"],
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true,
+  showCursor: false,
+});
+
+// Typing animation for Computer Science
+new Typed(".bsc", {
+  strings: ["Computer Science"],
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true,
+  showCursor: false,
 });
 
 // Get the current year
