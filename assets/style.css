@@ -861,7 +861,7 @@ section .title::after {
   .about-details {
     width: 100%;
     margin: 0;
-    padding: 20px;
+    padding: 20px 28px;
   }
 
   .wrapperIcons {
@@ -914,12 +914,22 @@ section .title::after {
   }
 
 
+  /* Contact Session Mobile View */
+  .contact {
+  padding-bottom: 7px;
+}
+  .contact .container {
+    margin: 0;
+    padding: 0;
+  }
   .certifications{
     width: 100%;
+    border-top: 1px solid var(--border);
+    padding: 1px 22px;
   }
   .certifications h3 {
           margin-top: 1rem;
-          text-align: center;
+          padding-left: 17px;
         }
 
                 .certification-item{
