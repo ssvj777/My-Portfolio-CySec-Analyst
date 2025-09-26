@@ -913,37 +913,8 @@ section .title::after {
     font-size: 1.1rem;
   }
 
-
-  /* Contact Session Mobile View */
-  .contact {
-  padding-bottom: 7px;
+      /* Contact Session Mobile View */
+.contact {
+  padding-bottom: 22px;
 }
-  .contact .container {
-    margin: 0;
-    padding: 0;
-  }
-  .certifications{
-    width: 100%;
-    border-top: 1px solid var(--border);
-    padding: 1px 22px;
-  }
-  .certifications h3 {
-          margin-top: 1rem;
-          padding-left: 17px;
-        }
-
-                .certification-item{
-            
-            display: grid;
-            gap: 3px;
-            
-        }
-
-                .course-name{
-            padding-left: 17px;
-        }
-
-        .course-provider {
-            padding-left: 28px;
-        }
 }
