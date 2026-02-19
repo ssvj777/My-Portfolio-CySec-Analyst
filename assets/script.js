@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // animation Script for display
-const animationScript = ["CyberSecurity Graduate", "SOC Analyst"];
+const animationScript = ["CyberSecurity Graduate"];
 
 
 // Typing animation script start
